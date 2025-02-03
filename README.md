@@ -31,10 +31,10 @@ O ONE é um programa de educação e empregabilidade com objetivo social de capa
 **1. Formação Desenvolvimento Pessoal (36h)**
 
 * Como utilizar o fórum ✔️
-* Aprender a aprender
+* Aprender a aprender ✔️
 * Turbine seu LinkedIn
-* Foco no dia a dia
-* Comece pelos seus hábitos
+* Foco no dia a dia ✔️
+* Comece pelos seus hábitos ✔️
 
 <br>
 <br>
@@ -42,8 +42,8 @@ O ONE é um programa de educação e empregabilidade com objetivo social de capa
 **2. Formação Iniciante em Programação (70h)**
 * Como utilizar o fórum ✔️ 
 * Planos de estudos ✔️ 
-* Aprenda lógica de programação
-* Ganhe experiência com Git
+* Aprenda lógica de programação ✔️
+* Ganhe experiência com Git ✔️
 * Encare o Challenge de iniciante em programação
 * Domine a arte de criar *prompts* no ChatGPT
 * Crie suas primeiras páginas *web*
@@ -53,6 +53,7 @@ O ONE é um programa de educação e empregabilidade com objetivo social de capa
 
 **3. Mentorias**
 * *Live* de lançamento - Hello, ONE BR - Amanda Gelumbauskas e Letícia Bohrer ✔️
+* *Live* - Autoconhecimento e Autoaprendizagem - Jose Gonzalez e Gabriela Aguiar ✔️
 
 <br>
 <br>
@@ -61,3 +62,4 @@ O ONE é um programa de educação e empregabilidade com objetivo social de capa
 <br>
 
 * [Trello do Programa](https://trello.com/b/8L5kJ3zv/formacao-iniciante-em-programacao)
+* [Trello do Challenge Amigo Secreto](https://trello.com/b/h1bhf3Xc/trello-challenge-amigo-secreto-pt)
