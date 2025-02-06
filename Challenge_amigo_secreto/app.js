@@ -12,6 +12,7 @@ function adicionarAmigo() {
             amigos.push(nomeAmigo);
             inputAmigo.value = "";
             exibirListaAmigos();
+            habilitarBotao();
         }
     }
 }
@@ -49,6 +50,13 @@ function exibirListaAmigos() {
             itemLista.innerHTML = element;
             listaAmigos.append(itemLista);
         });
+    }
+}
+
+function habilitarBotao() {
+    const botaoSortear = document.getElementsByClassName("button-draw");
+    if (amigos.length >= 2) {
+        botaoSortear[0].disabled = false;
     }
 }
 
