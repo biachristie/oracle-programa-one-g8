@@ -32,7 +32,7 @@ const exibirListaAmigos = () => {
     listaAmigos.innerHTML = amigos.map(nome => `<li>${ nome }</li>`).join("");
 }
 
-const habilitarBotao = e => document.querySelector(e).disabled = amigos.length < 2;
+const habilitarBotao = selector => document.querySelector(selector).disabled = amigos.length < 2;
 
 const sortearAmigo = () => {
     let nomeSorteado = amigos[Math.floor(Math.random() * amigos.length)];
@@ -44,4 +44,6 @@ const reiniciar = () => {
     amigos = [];
     document.getElementById("listaAmigos").innerHTML = "";
     document.getElementById("resultado").innerHTML = "";
+    habilitarBotao(".button-draw");
+    habilitarBotao(".button-restart");
 }
