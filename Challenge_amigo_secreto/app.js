@@ -8,7 +8,7 @@ function adicionarAmigo() {
     } else {
         let nomeAmigo = verificarInput(inputAmigo.value);
 
-        if (typeof nomeAmigo !== "undefined") {
+        if (typeof nomeAmigo !== "undefined" && !verificarNomeRepetido(nomeAmigo)) {
             amigos.push(nomeAmigo);
             inputAmigo.value = "";
             exibirListaAmigos();
@@ -23,14 +23,20 @@ function verificarInput(value) {
         alert("Caractere inválido! Apenas letras e acentos são permitidos.");
     } else {
         let nomeAmigo = removerEspaços(value);
-        return nomeAmigo;
+        return nomeAmigo.toUpperCase();
     }
-
 }
 
 function removerEspaços(value) {
     let stringEditada = value.trim();
     return stringEditada;
+}
+
+function verificarNomeRepetido(value) {
+    if (amigos.includes(value)) {
+        alert("Nome repetido! Insira outro nome.");
+        return true
+    }
 }
 
 function exibirListaAmigos() {
