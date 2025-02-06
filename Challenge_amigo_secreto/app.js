@@ -1,7 +1,5 @@
 let amigos = [];
 
-const limparInput = e => e.value = "";
-
 const adicionarAmigo = () => {
     const caracteresPermitidos = /^[A-Za-záéíóúãâêôàèùçÁÉÍÓÚÂÊÔÀÈÙÇ ]*$/;
 
@@ -23,8 +21,10 @@ const adicionarAmigo = () => {
     amigos.push(nomeAmigo);
     limparInput(inputAmigo);
     exibirListaAmigos();
-    habilitarBotao();
+    habilitarBotao(".button-draw");
 }
+
+const limparInput = e => e.value = "";
 
 const exibirListaAmigos = () => {
     let listaAmigos = document.getElementById("listaAmigos");
@@ -32,11 +32,16 @@ const exibirListaAmigos = () => {
     listaAmigos.innerHTML = amigos.map(nome => `<li>${ nome }</li>`).join("");
 }
 
-const habilitarBotao = () => {
-    document.querySelector(".button-draw").disabled = amigos.length < 2;
-}
+const habilitarBotao = e => document.querySelector(e).disabled = amigos.length < 2;
 
 const sortearAmigo = () => {
     let nomeSorteado = amigos[Math.floor(Math.random() * amigos.length)];
     document.getElementById("resultado").innerHTML = `<li>O amigo secreto sorteado é: ${ nomeSorteado }</li>`;
+    habilitarBotao(".button-restart");
+}
+
+const reiniciar = () => {
+    amigos = [];
+    document.getElementById("listaAmigos").innerHTML = "";
+    document.getElementById("resultado").innerHTML = "";
 }
