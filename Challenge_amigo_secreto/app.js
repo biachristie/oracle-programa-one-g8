@@ -1,71 +1,42 @@
 let amigos = [];
 
-function adicionarAmigo() {
+const limparInput = e => e.value = "";
+
+const adicionarAmigo = () => {
+    const caracteresPermitidos = /^[A-Za-záéíóúãâêôàèùçÁÉÍÓÚÂÊÔÀÈÙÇ ]*$/;
+
     let inputAmigo = document.getElementById("amigo");
+    let nomeAmigo = inputAmigo.value.trim().toUpperCase();
     
-    if (inputAmigo.value == "") {
-        alert("Por favor, insira um nome válido.");
-    } else {
-        let nomeAmigo = verificarInput(inputAmigo.value);
-
-        if (typeof nomeAmigo !== "undefined" && !verificarNomeRepetido(nomeAmigo)) {
-            amigos.push(nomeAmigo);
-            inputAmigo.value = "";
-            exibirListaAmigos();
-            habilitarBotao();
-        }
-    }
-}
-
-function verificarInput(value) {
-    const caracteresPermitidos = /^[A-Za-záéíóúãâêôàèùçÁÉÍÓÚÂÊÔÀÈÙÇ`^~´ ]*$/;
+    if (!nomeAmigo || !caracteresPermitidos.test(nomeAmigo)) {
+        alert("Por favor, insira um nome válido (apenas letras e letras acentuadas).");
+        limparInput(inputAmigo);
+        return;
+    } 
     
-    if (!caracteresPermitidos.test(value)) {
-        alert("Caractere inválido! Apenas letras e acentos são permitidos.");
-    } else {
-        let nomeAmigo = removerEspaços(value);
-        return nomeAmigo.toUpperCase();
-    }
-}
-
-function removerEspaços(value) {
-    let stringEditada = value.trim();
-    return stringEditada;
-}
-
-function verificarNomeRepetido(value) {
-    if (amigos.includes(value)) {
+    if (amigos.includes(nomeAmigo)) {
         alert("Nome repetido! Insira outro nome.");
-        return true
+        limparInput(inputAmigo);
+        return;
     }
+
+    amigos.push(nomeAmigo);
+    limparInput(inputAmigo);
+    exibirListaAmigos();
+    habilitarBotao();
 }
 
-function exibirListaAmigos() {
+const exibirListaAmigos = () => {
     let listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
-
-    if (amigos.length) {
-        amigos.forEach(element => {
-            let itemLista = document.createElement("li");
-            itemLista.innerHTML = element;
-            listaAmigos.append(itemLista);
-        });
-    }
+    listaAmigos.innerHTML = amigos.map(nome => `<li>${ nome }</li>`).join("");
 }
 
-function habilitarBotao() {
-    const botaoSortear = document.getElementsByClassName("button-draw");
-    if (amigos.length >= 2) {
-        botaoSortear[0].disabled = false;
-    }
+const habilitarBotao = () => {
+    document.querySelector(".button-draw").disabled = amigos.length < 2;
 }
 
-function sortearAmigo() {
-    if (amigos != "") {
-        let i = Math.floor(Math.random() * amigos.length);
-        let nomeSorteado = amigos[i];
-
-        let resultado = document.getElementById("resultado");
-        resultado.innerHTML = `<li>O amigo secreto sorteado é: ${ nomeSorteado }</li>`;
-    }
+const sortearAmigo = () => {
+    let nomeSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    document.getElementById("resultado").innerHTML = `<li>O amigo secreto sorteado é: ${ nomeSorteado }</li>`;
 }
