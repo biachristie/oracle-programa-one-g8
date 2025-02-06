@@ -29,7 +29,21 @@ const limparInput = e => e.value = "";
 const exibirListaAmigos = () => {
     let listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
-    listaAmigos.innerHTML = amigos.map(nome => `<li>${ nome }</li>`).join("");
+    listaAmigos.innerHTML = amigos.map(nome => {
+        return `
+            <li>
+                ${ nome }
+                <button class="button-delete" onclick="excluirAmigo('${ nome }')">
+                    <img src="assets/delete.png" alt="Ícone para excluir">
+                </button>
+            </li>`
+    }).join("");
+}
+
+const excluirAmigo = nome => {
+    amigos = amigos.filter(amigo => amigo !== nome);
+    exibirListaAmigos();
+    habilitarBotao(".button-draw");
 }
 
 const habilitarBotao = selector => document.querySelector(selector).disabled = amigos.length < 2;
