@@ -6,10 +6,15 @@ function adicionarAmigo() {
     if (inputAmigo.value == "") {
         alert("Por favor, insira um nome válido.");
     } else {
-        amigos.push(inputAmigo.value);
+        amigos.push(editarString(inputAmigo.value));
         inputAmigo.value = "";
         exibirListaAmigos();
     }
+}
+
+function editarString(value) {
+    let stringEditada = value.trim();
+    return stringEditada;
 }
 
 function exibirListaAmigos() {
