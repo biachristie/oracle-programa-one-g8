@@ -22,7 +22,7 @@ O sistema realiza o sorteio dos participantes de forma aleatória e exibe os res
 
 ## 🖥️ Como Acessar o Sorteio
 
-Acesse através da URL https://biachristie.github.io/oracle-programa-one-g8/challenge-amigo-secreto/ para visualizar o sorteio.
+Acesse o sorteio através do [LINK](https://biachristie.github.io/oracle-programa-one-g8/amigo-secreto).
 <br><br>
 
 ## 🔨 Tecnologias Utilizadas
