@@ -5,6 +5,10 @@
 Este é um projeto simples de sorteio de amigo secreto, desenvolvido para facilitar a realização de sorteios de forma automática.
 <br><br>
 
+<div align="center">
+    <img src="./assets/image.png">
+</div>
+
 ## 🤔 Como Funciona
 
 O sistema realiza o sorteio dos participantes de forma aleatória e exibe os resultados em uma lista simples.
