@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @Service
@@ -71,9 +72,7 @@ public class TokenService {
     }
 
     private Instant dataExpiracao() {
-        return LocalDateTime.now()
-                .plusHours(expiration)
-                .toInstant(ZoneOffset.UTC);
+        return Instant.now().plus(this.expiration, ChronoUnit.HOURS);
     }
 
 }
