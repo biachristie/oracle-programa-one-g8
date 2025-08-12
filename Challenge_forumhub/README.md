@@ -67,7 +67,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://biachristie.github.io/oracle-programa-one-g8/challenge-forum-hub](https://biachristie.github.io/oracle-programa-one-g8/challenge-forum-hub)
+    git clone [https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_forumhub](https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_forumhub)
     cd forumhub-api
     ```
 
