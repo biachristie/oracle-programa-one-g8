@@ -1,0 +1,2 @@
+insert into usuarios(id, nome, email, login, senha) values (1, 'Admin', 'admin@email.com', 'admin', '$2a$12$LMZmb2aCEuEeWlCJ8KgzPOH2EV/ykhFafNouffz/mzUiwcFFUQYIm');
+insert into usuarios_perfis(usuario_id, perfil_id) values(1, 1);
