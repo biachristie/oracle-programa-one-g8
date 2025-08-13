@@ -43,6 +43,8 @@ O menu interativo oferece as seguintes opções:
 -   **Maven** configurado no seu ambiente.
 -   Um servidor **PostgreSQL** ativo e rodando na sua máquina.
 
+---
+
 ## 🚀 Como Executar o Projeto
 
 Siga os passos abaixo para rodar o projeto localmente:
