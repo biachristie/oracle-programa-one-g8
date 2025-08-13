@@ -67,40 +67,83 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_forumhub](https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_forumhub)
-    cd challenge_forumhub
+    git clone https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_forumhub
+    cd Challenge_forumhub
     ```
 
 2.  **Crie e configure o banco de dados:**
     * Crie um banco de dados no seu SGBD (ex: `forumhub_db`).
 
-3.  **Configure as variáveis de ambiente:**
+3.  **Crie o arquivo de variáveis de ambiente:**
+    - Na raiz do projeto, crie um arquivo chamado `.env`.
+    - Dentro deste arquivo, adicione sua chave da API da seguinte forma:
+
+    ```
+      DB_HOST = INSIRA O NOME DO HOST
+      DB_NAME = INSIRA O NOME DO BANCO DE DADOS
+      DB_PASSWORD = INSIRA A SENHA DO BANCO DE DADOS
+      DB_USER = INSIRA O NOME DO USUÁRIO DO BANCO DE DADOS
+      JWT_SECRET = INSIRA A SENHA PARA GERAR O TOKEN
+      JWT_EXPIRATION = INSIRA O TEMPO EM HORAS PARA EXPIRAÇÃO DO TOKEN
+    ```
+
+4.  **Configure as variáveis de ambiente:**
     * Abra o arquivo `src/main/resources/application.properties`.
     * Altere as propriedades de conexão com o banco de dados e as configurações do JWT de acordo com seu ambiente.
 
     ```properties
     # Configuração do Banco de Dados (exemplo com MySQL)
-    spring.datasource.url=jdbc:mysql://localhost/forumhub_db
-    spring.datasource.username=<seu-usuario-db>
-    spring.datasource.password=<sua-senha-db>
+    spring.datasource.url=jdbc:mysql://localhost/${DB_NAME}
+    spring.datasource.username=${DB_USER}
+    spring.datasource.password=${DB_PASSWORD}
     spring.jpa.hibernate.ddl-auto=validate # 'validate' pois o Flyway gerencia o schema
 
     # Configuração do JWT
     # ATENÇÃO: Use um segredo forte e longo em um ambiente de produção!
     api.security.token.secret=${JWT_SECRET:seu-secret-super-secreto-e-longo-padrao}
-    api.security.token.expiration=2 # Em horas
+    api.security.token.expiration=${JWT_EXPIRATION} # Em horas
     ```
 
-4.  **Execute a aplicação:**
+5.  **Execute a aplicação:**
     * Use o Maven para compilar e rodar o projeto. O Flyway executará as migrations automaticamente na primeira inicialização.
     ```bash
     mvn spring-boot:run
     ```
 
-5.  **Acesse a API:**
+6.  **Acesse a API:**
     * A aplicação estará disponível em `http://localhost:8080`.
     * A documentação do Swagger estará em `http://localhost:8080/swagger-ui.html`.
 
+## 📂 Estrutura do Projeto
+
+```bash
+├───src
+    ├───main
+        ├───java
+        │   └───forumhub
+        │       └───api
+        │           ├───controller
+        │           ├───domain
+        │           ├───dto
+        │           │   ├───auth
+        │           │   ├───categoria
+        │           │   ├───curso
+        │           │   ├───error
+        │           │   ├───perfil
+        │           │   ├───resposta
+        │           │   └───topico
+        │           ├───infra
+        │           │   ├───exception
+        │           │   ├───security
+        │           │   └───springdoc
+        │           ├───repository
+        │           └───service
+        └───resources
+            ├───db
+            │   └───migration
+            ├───static
+            └───templates
+```
 
 ## 📃 Licença
 
