@@ -89,7 +89,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 4.  **Configure as variáveis de ambiente:**
     * Abra o arquivo `src/main/resources/application.properties`.
-    * Altere as propriedades de conexão com o banco de dados e as configurações do JWT de acordo com seu ambiente.
+    * Adicione as propriedades de conexão com o banco de dados e as configurações do JWT de acordo com seu ambiente.
 
     ```properties
     # Configuração do Banco de Dados (exemplo com MySQL)
