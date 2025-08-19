@@ -13,13 +13,13 @@
 </div>
 <br>
 
-O ONE é um programa de educação e empregabilidade com objetivo social de capacitar pessoas em tecnologia e conectá-las com o mercado de trabalho por meio de empresas parceiras. O curso é 100% *online* e totalmente gratuito, feito para quem não teve acesso à educação de qualidade e deseja transformar a sua realidade social. As formações fazem parte do programa ONE, parceria de Alura + Oracle.
+O ONE é um programa de educação e empregabilidade com objetivo social de capacitar pessoas em tecnologia e conectá-las com o mercado de trabalho por meio de empresas parceiras. O curso é 100% *online* e totalmente gratuito, e as formações são parceria de Alura + Oracle.
 
 <br>
 
-**Início**: 13/01/2025 | **Término**: 18/03/2025
+**Início**: 13/01/2025 | **Término**: 19/08/2025
 
-**Carga Horária**: 107h
+**Carga Horária**: 332h
 
 <br>
 
@@ -44,9 +44,9 @@ O ONE é um programa de educação e empregabilidade com objetivo social de capa
 * Planos de estudos ✔️ 
 * Aprenda lógica de programação ✔️
 * Ganhe experiência com Git ✔️
-* Encare o Challenge de iniciante em programação
-* Domine a arte de criar *prompts* no ChatGPT
-* Crie suas primeiras páginas *web*
+* [Encare o Challenge de iniciante em programação](https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_amigo_secreto) ✔️
+* Domine a arte de criar *prompts* no ChatGPT ✔️
+* Crie suas primeiras páginas *web* ✔️
 
 <br>
 <br>
@@ -58,8 +58,43 @@ O ONE é um programa de educação e empregabilidade com objetivo social de capa
 <br>
 <br>
 
-## 📌 Conteúdo extra 
+**FASE DE ESPECIALIZAÇÃO BACK-END**
+
+**1. Formação Empreendedorismo, Agilidade e Protagonismo na Carreira (47h)**
+
+* Começar a entender o mercado ✔️
+* Agilidade ✔️
+* Empreendedorismo ✔️
+
+<br>
 <br>
 
-* [Trello do Programa](https://trello.com/b/8L5kJ3zv/formacao-iniciante-em-programacao)
-* [Trello do Challenge Amigo Secreto](https://trello.com/b/h1bhf3Xc/trello-challenge-amigo-secreto-pt)
+**2. Formação Java e Orientação a Objetos (53h)**
+* Diagnóstico de aprendizado Formação Java ✔️ 
+* Planos de estudos ✔️ 
+* Entender a linguagem Java e orientação a objetos ✔️
+* Orientação a objetos ✔️
+* Manipule listas, consuma API e lide com exceções ✔️
+* [Encare o Challenge Back End ONE](https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_conversor_moedas) ✔️
+
+<br>
+<br>
+
+**3. Formação Java e Spring *Framework* (108h)**
+* Diagnóstico de aprendizado ✔️ 
+* Planos de estudos ✔️ 
+* Java Web e banco de dados ✔️
+* [Aceite o desafio e construa seu LiterAlura](https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_literalura) ✔️
+* API REST com Spring Boot 3 ✔️
+* [Aceite o desafio e construa seu próprio Fórum](https://github.com/biachristie/oracle-programa-one-g8/tree/main/Challenge_forumhub) ✔️
+
+<br>
+<br>
+
+**4. Formação Inteligência Artificial e Java (18h)**
+* Diagnóstico de aprendizado Formação Inteligência Artificial e Java ✔️ 
+* Produtividade e inteligência artificial ✔️ 
+* Integrando aplicações com OpenAI ✔️
+
+<br>
+<br>
